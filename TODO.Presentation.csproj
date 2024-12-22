@@ -4,10 +4,19 @@
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>8996bc76-fbbb-4084-a0a4-4bf3db69515a</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="11.11.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="9.0.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TODO.Application\TODO.Application.csproj" />
+    <ProjectReference Include="..\TODO.DataAccess\TODO.DataAccess.csproj" />
+    <ProjectReference Include="..\TODO.Infrastructure\TODO.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>
