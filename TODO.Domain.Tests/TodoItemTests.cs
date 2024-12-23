@@ -97,8 +97,8 @@ namespace TODO.Domain.Tests
         public async Task Update_ValidInput_Success()
         {
             _todoRepository.Setup(x => x.Update(It.IsAny<TodoItem>())).ReturnsAsync(true);
-            var student = ValidTodoItem(_fixture);
-            var output = await student.Update(_todoRepository.Object, _validationEngine.Object);
+            var totoItem = ValidTodoItem(_fixture);
+            var output = await totoItem.Update(_todoRepository.Object, _validationEngine.Object);
 
             Assert.True(output);
         }
